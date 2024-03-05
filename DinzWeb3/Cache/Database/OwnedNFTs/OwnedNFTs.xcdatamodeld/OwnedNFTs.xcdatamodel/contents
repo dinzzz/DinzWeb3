@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="DBNFTModel" representedClassName="DBNFTModel" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="nftDescription" optional="YES" attributeType="String"/>
+        <attribute name="symbol" optional="YES" attributeType="String"/>
+        <relationship name="relationship" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OwnedNFTs" inverseName="nfts" inverseEntity="OwnedNFTs"/>
+    </entity>
+    <entity name="OwnedNFTs" representedClassName="OwnedNFTs" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <relationship name="nfts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBNFTModel" inverseName="relationship" inverseEntity="DBNFTModel"/>
+    </entity>
+</model>
