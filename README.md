@@ -54,3 +54,9 @@ Tests:
   - Including async elements testing (Combine)
   - Testing all modules and services, with the exception of UI elements of modules containing SwiftUI code
 
+Additionally used packages:
+  - Alamofire (Networking)
+  - Kingfisher (Fetching images)
+  - Web3.swift (Currently not used, but offers some valuable features)
+
+
